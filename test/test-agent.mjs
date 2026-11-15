@@ -59,7 +59,7 @@ function check(name, cond, extra) {
 
 async function main() {
   const vk = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'circuits', 'vk.json'), 'utf8'));
-  const server = spawn('node', [path.join(__dirname, '..', 'server.js')], {
+  const server = spawn('node', [path.join(__dirname, '..', 'standalone', 'server.js')], {
     env: { ...process.env, PORT: String(PORT), AGENT_GAMES_HMAC_SECRET: SECRET },
     stdio: ['ignore', 'pipe', 'pipe'],
   });
