@@ -95,7 +95,7 @@ PROOF_REUSED (REJECT, no proof), idempotent retry, bad/missing signature
 ## Files
 
 ```
-server.js            standalone HTTP server (POST /agent, GET /health)
+standalone/server.js  standalone HTTP server (POST /agent, GET /health)
 api/agent.js         Vercel serverless function (same handler, raw-body HMAC)
 lib/gatekeeper.js    decision rules + circuit input encoding
 lib/handler.js       request pipeline (HMAC -> decide -> prove -> sign)
